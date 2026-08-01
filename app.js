@@ -3,6 +3,13 @@
   const state = { search: '', brand: 'all', sensor: 'all', purpose: 'all', sort: 'brand' };
   const sensorNames = { 'Full Frame': 'フルサイズ', 'APS-C': 'APS-C', 'Medium Format': 'ラージフォーマット' };
   const purposeNames = { photo: '写真', hybrid: 'ハイブリッド', video: '映像', speed: '高速撮影' };
+  const strengthOrder = [
+    'canon-r1', 'canon-r5-ii', 'canon-r6-iii', 'canon-r8',
+    'fuji-gfx100s-ii', 'fuji-xh2s', 'fuji-xh2', 'fuji-xt5', 'fuji-xs20',
+    'nikon-z9', 'nikon-z8', 'nikon-z6-iii', 'nikon-zr', 'nikon-z5-ii',
+    'sony-a1-ii', 'sony-a9-iii', 'sony-a7r-vi', 'sony-fx3', 'sony-fx2', 'sony-a7-v', 'sony-a7-iv', 'sony-a7cr', 'sony-a7c-ii', 'sony-fx30', 'sony-a6700'
+  ];
+  const strengthRank = new Map(strengthOrder.map((id, index) => [id, index]));
   const els = {
     search: document.querySelector('#search'), clearSearch: document.querySelector('#clear-search'), brand: document.querySelector('#brand-filter'), sensor: document.querySelector('#sensor-filter'), purpose: document.querySelector('#purpose-filter'), sort: document.querySelector('#sort'),
     rows: document.querySelector('#camera-rows'), cards: document.querySelector('#camera-cards'), count: document.querySelector('#result-count'), empty: document.querySelector('#empty-state'), detailDialog: document.querySelector('#detail-dialog'), detailContent: document.querySelector('#detail-content')
@@ -24,7 +31,7 @@
       if (state.sort === 'newest') return b.released.localeCompare(a.released);
       if (state.sort === 'resolution') return b.mp - a.mp;
       if (state.sort === 'weight') return a.weight - b.weight;
-      return a.brand.localeCompare(b.brand) || b.released.localeCompare(a.released);
+      return a.brand.localeCompare(b.brand) || (strengthRank.get(a.id) ?? 999) - (strengthRank.get(b.id) ?? 999);
     });
   };
 
