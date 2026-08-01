@@ -32,12 +32,12 @@
 
   const cameraRow = c => `<tr>
     <td class="model-cell"><button class="model-button" type="button" data-detail="${c.id}">${cameraImage(c, 'camera-thumb')}<span class="model-copy"><strong>${c.model}</strong><span>${c.brand} · ${c.mount}</span></span></button></td>
-    <td>${sensorNames[c.sensor]}</td><td>${c.mp} MP</td><td>${c.ibisLabel}</td><td>${c.burst}</td><td>${c.video}</td><td class="price-cell">${c.price}</td><td class="display-cell">${c.display || '—'}</td><td>${c.brightness || '—'}</td><td>${c.weight} g</td>
+    <td>${sensorNames[c.sensor]}</td><td>${c.mp} MP</td><td>${c.ibisLabel}</td><td>${c.burst}</td><td>${c.video}</td><td class="price-cell">${c.price}</td><td>${c.weight} g</td>
   </tr>`;
   const cameraCard = c => `<article class="camera-card">
     ${cameraImage(c, 'card-image')}
     <div class="card-top"><button class="card-model" type="button" data-detail="${c.id}"><span>${c.brand} · ${c.mount}</span><strong>${c.model}</strong></button></div>
-    <div class="card-specs"><p><span>Sensor</span>${sensorNames[c.sensor]}</p><p><span>Resolution</span>${c.mp} MP</p><p><span>IBIS</span>${c.ibisLabel}</p><p><span>Burst</span>${c.burst}</p><p><span>Video</span>${c.video}</p><p><span>Official price</span>${c.price}</p><p class="wide-spec"><span>Display</span>${c.display || '—'}</p><p><span>Max brightness</span>${c.brightness || '—'}</p><p><span>Weight</span>${c.weight} g</p></div>
+    <div class="card-specs"><p><span>Sensor</span>${sensorNames[c.sensor]}</p><p><span>Resolution</span>${c.mp} MP</p><p><span>IBIS</span>${c.ibisLabel}</p><p><span>Burst</span>${c.burst}</p><p><span>Video</span>${c.video}</p><p><span>Official price</span>${c.price}</p><p><span>Weight</span>${c.weight} g</p></div>
   </article>`;
 
   function render() {
@@ -54,7 +54,7 @@
   function openDetail(id) {
     const c = cameras.find(item => item.id === id); if (!c) return;
     els.detailContent.innerHTML = `<div class="detail-hero"><div class="detail-top"><div><p class="detail-brand">${c.brand} · ${c.mount}</p><h2>${c.model}</h2></div><button class="icon-button" type="button" data-close-dialog aria-label="閉じる">×</button></div>${cameraImage(c, 'detail-image')}<p class="detail-meta">Released ${c.released.replace('-', '.')} · ${c.purpose.map(p => purposeNames[p]).join(' / ')}</p></div>
-      <dl class="spec-grid"><div><dt>Sensor</dt><dd>${sensorNames[c.sensor]}</dd></div><div><dt>Resolution</dt><dd>${c.mp} MP</dd></div><div><dt>Mount</dt><dd>${c.mount}</dd></div><div><dt>IBIS</dt><dd>${c.ibisLabel}</dd></div><div><dt>Max burst</dt><dd>${c.burst}</dd></div><div><dt>Max video</dt><dd>${c.video}</dd></div><div><dt>Official price</dt><dd>${c.price}</dd></div><div><dt>Max brightness</dt><dd>${c.brightness || '—'}</dd></div><div class="wide-spec"><dt>Display</dt><dd>${c.display || '—'}</dd></div><div><dt>Weight</dt><dd>${c.weight} g</dd></div><div><dt>Released</dt><dd>${c.released.replace('-', '.')}</dd></div></dl>
+      <dl class="spec-grid"><div><dt>Sensor</dt><dd>${sensorNames[c.sensor]}</dd></div><div><dt>Resolution</dt><dd>${c.mp} MP</dd></div><div><dt>Mount</dt><dd>${c.mount}</dd></div><div><dt>IBIS</dt><dd>${c.ibisLabel}</dd></div><div><dt>Max burst</dt><dd>${c.burst}</dd></div><div><dt>Max video</dt><dd>${c.video}</dd></div><div><dt>Official price</dt><dd>${c.price}</dd></div><div><dt>Weight</dt><dd>${c.weight} g</dd></div><div><dt>Released</dt><dd>${c.released.replace('-', '.')}</dd></div></dl>
       <a class="official-link" href="${c.official}" target="_blank" rel="noopener noreferrer">メーカー公式仕様を見る ↗</a>`;
     els.detailDialog.showModal();
   }
