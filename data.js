@@ -14,8 +14,8 @@ window.CAMERAS = [
   {id:'sony-a6700',brand:'Sony',model:'α6700',mount:'Sony E',sensor:'APS-C',mp:26.0,ibis:true,burst:'11 fps',burstValue:11,video:'4K 120p',weight:493,released:'2023-07',purpose:['photo','hybrid','video'],official:'https://www.sony.jp/ichigan/products/ILCE-6700/'},
   {id:'sony-zv-e1',brand:'Sony',model:'VLOGCAM ZV-E1',mount:'Sony E',sensor:'Full Frame',mp:12.1,ibis:true,burst:'10 fps',burstValue:10,video:'4K 120p',weight:483,released:'2023-04',purpose:['video'],official:'https://www.sony.jp/ichigan/products/ZV-E1/'},
   {id:'sony-zv-e10-ii',brand:'Sony',model:'VLOGCAM ZV-E10 II',mount:'Sony E',sensor:'APS-C',mp:26.0,ibis:false,burst:'11 fps',burstValue:11,video:'4K 60p',weight:377,released:'2024-08',purpose:['video'],official:'https://www.sony.jp/ichigan/products/ZV-E10M2/'},
-  {id:'sony-fx2',brand:'Sony',model:'Cinema Line FX2',mount:'Sony E',sensor:'Full Frame',mp:33.0,ibis:true,burst:'10 fps',burstValue:10,video:'4K 60p / 16-bit RAW output',weight:770,released:'2025-08',purpose:['hybrid','video'],official:'https://www.sony.jp/pro-cam/products/ILME-FX2/'},
-  {id:'sony-fx3',brand:'Sony',model:'Cinema Line FX3',mount:'Sony E',sensor:'Full Frame',mp:12.1,ibis:true,burst:'10 fps',burstValue:10,video:'4K 120p / 16-bit RAW output',weight:715,released:'2021-03',purpose:['video'],official:'https://www.sony.jp/pro-cam/products/ILME-FX3/'},
+  {id:'sony-fx2',brand:'Sony',model:'Cinema Line FX2',mount:'Sony E',sensor:'Full Frame',mp:33.0,ibis:true,burst:'10 fps',burstValue:10,video:'4K 60p / 16-bit RAW output',weight:770,released:'2025-08',purpose:['hybrid','video'],official:'https://www.sony.jp/pro-cam/products/ILME-FX2B/'},
+  {id:'sony-fx3',brand:'Sony',model:'Cinema Line FX3',mount:'Sony E',sensor:'Full Frame',mp:12.1,ibis:true,burst:'10 fps',burstValue:10,video:'4K 120p / 16-bit RAW output',weight:715,released:'2021-03',purpose:['video'],official:'https://www.sony.jp/pro-cam/products/ILME-FX3A/'},
   {id:'sony-fx30',brand:'Sony',model:'Cinema Line FX30',mount:'Sony E',sensor:'APS-C',mp:26.0,ibis:true,burst:'—',burstValue:0,video:'4K 120p / 16-bit RAW output',weight:646,released:'2022-10',purpose:['video'],official:'https://www.sony.jp/pro-cam/products/ILME-FX30/'},
 
   {id:'canon-r1',brand:'Canon',model:'EOS R1',mount:'Canon RF',sensor:'Full Frame',mp:24.2,ibis:true,burst:'40 fps',burstValue:40,video:'6K 60p RAW / 4K 120p',weight:1115,released:'2024-11',purpose:['photo','hybrid','speed'],official:'https://personal.canon.jp/product/camera/eos/r1'},
@@ -27,12 +27,7 @@ window.CAMERAS = [
   {id:'nikon-z8',brand:'Nikon',model:'Z8',mount:'Nikon Z',sensor:'Full Frame',mp:45.7,ibis:true,burst:'20 fps RAW / 120 fps JPEG',burstValue:120,video:'8.3K 60p RAW / 4K 120p',weight:910,released:'2023-05',purpose:['photo','hybrid','speed'],official:'https://www.nikon-image.com/products/mirrorless/lineup/z_8/'},
   {id:'nikon-z6-iii',brand:'Nikon',model:'Z6III',mount:'Nikon Z',sensor:'Full Frame',mp:24.5,ibis:true,burst:'20 fps RAW / 120 fps JPEG',burstValue:120,video:'6K 60p RAW / 4K 120p',weight:760,released:'2024-07',purpose:['hybrid','video','speed'],official:'https://www.nikon-image.com/products/mirrorless/lineup/z6_3/'},
   {id:'nikon-z5-ii',brand:'Nikon',model:'Z5II',mount:'Nikon Z',sensor:'Full Frame',mp:24.5,ibis:true,burst:'15 fps RAW / 30 fps JPEG',burstValue:30,video:'4K 60p RAW',weight:700,released:'2025-04',purpose:['photo','hybrid'],official:'https://www.nikon-image.com/products/mirrorless/lineup/z5_2/'},
-  {id:'nikon-zf',brand:'Nikon',model:'Zf',mount:'Nikon Z',sensor:'Full Frame',mp:24.5,ibis:true,burst:'14 fps RAW / 30 fps JPEG',burstValue:30,video:'4K 60p',weight:710,released:'2023-10',purpose:['photo','hybrid'],official:'https://www.nikon-image.com/products/mirrorless/lineup/z_f/'},
   {id:'nikon-zr',brand:'Nikon',model:'ZR',mount:'Nikon Z',sensor:'Full Frame',mp:24.5,ibis:true,burst:'20 fps RAW / 120 fps JPEG',burstValue:120,video:'6K 60p R3D NE RAW / 4K 120p',weight:630,released:'2025-10',purpose:['hybrid','video','speed'],official:'https://nij.nikon.com/products/lineup/z_cinema/zr/'},
-  {id:'nikon-z7-ii',brand:'Nikon',model:'Z7II',mount:'Nikon Z',sensor:'Full Frame',mp:45.7,ibis:true,burst:'10 fps',burstValue:10,video:'4K 60p',weight:705,released:'2020-12',purpose:['photo'],official:'https://www.nikon-image.com/products/mirrorless/lineup/z_7_2/'},
-  {id:'nikon-z50-ii',brand:'Nikon',model:'Z50II',mount:'Nikon Z',sensor:'APS-C',mp:20.9,ibis:false,burst:'11 fps RAW / 30 fps JPEG',burstValue:30,video:'4K 60p',weight:550,released:'2024-12',purpose:['photo','hybrid'],official:'https://www.nikon-image.com/products/mirrorless/lineup/z50_2/'},
-  {id:'nikon-zfc',brand:'Nikon',model:'Zfc',mount:'Nikon Z',sensor:'APS-C',mp:20.9,ibis:false,burst:'11 fps',burstValue:11,video:'4K 30p',weight:445,released:'2021-07',purpose:['photo'],official:'https://www.nikon-image.com/products/mirrorless/lineup/z_fc/'},
-  {id:'nikon-z30',brand:'Nikon',model:'Z30',mount:'Nikon Z',sensor:'APS-C',mp:20.9,ibis:false,burst:'11 fps',burstValue:11,video:'4K 30p',weight:405,released:'2022-08',purpose:['hybrid','video'],official:'https://www.nikon-image.com/products/mirrorless/lineup/z_30/'},
 
   {id:'fuji-gfx100s-ii',brand:'FUJIFILM',model:'GFX100S II',mount:'FUJIFILM G',sensor:'Medium Format',mp:102.0,ibis:true,burst:'7 fps',burstValue:7,video:'4K 30p',weight:883,released:'2024-06',purpose:['photo'],official:'https://www.fujifilm-x.com/ja-jp/products/cameras/gfx100s-ii/'},
   {id:'fuji-xh2s',brand:'FUJIFILM',model:'X-H2S',mount:'FUJIFILM X',sensor:'APS-C',mp:26.1,ibis:true,burst:'40 fps',burstValue:40,video:'6.2K 30p / 4K 120p',weight:660,released:'2022-07',purpose:['hybrid','video','speed'],official:'https://www.fujifilm-x.com/ja-jp/products/cameras/x-h2s/'},
@@ -40,3 +35,37 @@ window.CAMERAS = [
   {id:'fuji-xt5',brand:'FUJIFILM',model:'X-T5',mount:'FUJIFILM X',sensor:'APS-C',mp:40.2,ibis:true,burst:'20 fps',burstValue:20,video:'6.2K 30p / 4K 60p',weight:557,released:'2022-11',purpose:['photo','hybrid'],official:'https://www.fujifilm-x.com/ja-jp/products/cameras/x-t5/'},
   {id:'fuji-xs20',brand:'FUJIFILM',model:'X-S20',mount:'FUJIFILM X',sensor:'APS-C',mp:26.1,ibis:true,burst:'20 fps',burstValue:20,video:'6.2K 30p / 4K 60p',weight:491,released:'2023-06',purpose:['hybrid','video'],official:'https://www.fujifilm-x.com/ja-jp/products/cameras/x-s20/'}
 ];
+
+const CAMERA_DETAILS = {
+  'sony-a1-ii': {ibisLabel:'中央 8.5段 / 周辺 7.0段',image:'https://www.sony.jp/products/picture/middle/ILCE-1M2.jpg'},
+  'sony-a9-iii': {ibisLabel:'8.0段',image:'https://www.sony.jp/products/picture/middle/ILCE-9M3.jpg'},
+  'sony-a7r-vi': {ibisLabel:'中央 8.5段 / 周辺 7.0段',image:'https://www.sony.jp/products/picture/middle/ILCE-7RM6.jpg'},
+  'sony-a7-v': {ibisLabel:'中央 7.5段 / 周辺 6.5段',image:'https://www.sony.jp/products/picture/middle/ILCE-7M5.jpg'},
+  'sony-a7-iv': {ibisLabel:'5.5段',image:'https://www.sony.jp/products/picture/middle/ILCE-7M4.jpg'},
+  'sony-a7cr': {ibisLabel:'7.0段',image:'https://www.sony.jp/products/picture/middle/ILCE-7CR.jpg'},
+  'sony-a7c-ii': {ibisLabel:'7.0段',image:'https://www.sony.jp/products/picture/middle/ILCE-7CM2.jpg'},
+  'sony-a6700': {ibisLabel:'5.0段',image:'https://www.sony.jp/products/picture/middle/ILCE-6700.jpg'},
+  'sony-zv-e1': {ibisLabel:'5.0段',image:'https://www.sony.jp/products/picture/middle/ZV-E1.jpg'},
+  'sony-zv-e10-ii': {ibisLabel:'なし',image:'https://www.sony.jp/products/picture/middle/ZV-E10M2.jpg'},
+  'sony-fx2': {ibisLabel:'中央 5.5段 / 周辺 5.0段',image:'https://www.sony.jp/products/picture/middle/ILME-FX2B.jpg'},
+  'sony-fx3': {ibisLabel:'5.5段',image:'https://www.sony.jp/products/picture/middle/ILME-FX3A.jpg'},
+  'sony-fx30': {ibisLabel:'5軸 5.5段',image:'https://www.sony.jp/products/picture/middle/ILME-FX30.jpg'},
+  'canon-r1': {ibisLabel:'中央 8.5段 / 周辺 7.5段'},
+  'canon-r5-ii': {ibisLabel:'中央 8.5段 / 周辺 7.5段'},
+  'canon-r6-iii': {ibisLabel:'中央 8.5段 / 周辺 7.5段'},
+  'canon-r8': {ibisLabel:'なし'},
+  'nikon-z9': {ibisLabel:'最大 6.0段',image:'https://nij.nikon.com/cms/products/mirrorless/lineup/z_9/img/index/product_01.jpg'},
+  'nikon-z8': {ibisLabel:'最大 6.0段',image:'https://nij.nikon.com/cms/products/mirrorless/lineup/z_8/img/index/product_01.jpg'},
+  'nikon-z6-iii': {ibisLabel:'8.0段',image:'https://nij.nikon.com/cms/products/mirrorless/lineup/z6_3/img/index/product_01.jpg'},
+  'nikon-z5-ii': {ibisLabel:'中央 7.5段 / 周辺 6.0段',image:'https://nij.nikon.com/cms/products/lineup/mirrorless/z5_2/img/index/product_01.jpg'},
+  'nikon-zr': {ibisLabel:'中央 7.5段 / 周辺 6.0段',image:'https://nij.nikon.com/cms/products/lineup/z_cinema/zr/img/index/product_01.jpg'},
+  'fuji-gfx100s-ii': {ibisLabel:'8.0段',image:'https://www.fujifilm-x.com/products-cameras-static/gfx100s-ii/assets/images/top/fusq_kv_img_01_pc.png'},
+  'fuji-xh2s': {ibisLabel:'7.0段',image:'https://www.fujifilm-x.com/products-cameras-static/x-h2s/assets/images/top/fusq_kv_img_01_pc.png'},
+  'fuji-xh2': {ibisLabel:'7.0段',image:'https://www.fujifilm-x.com/products-cameras-static/x-h2/assets/images/top/fusq_kv_img_01_pc.png'},
+  'fuji-xt5': {ibisLabel:'7.0段',image:'https://www.fujifilm-x.com/products-cameras-static/x-t5/assets/images/top/fusq_kv_img_01_pc.png'},
+  'fuji-xs20': {ibisLabel:'7.0段',image:'https://www.fujifilm-x.com/products-cameras-static/x-s20/assets/images/top/fusq_kv_img_01_pc.png'}
+};
+
+window.CAMERAS.forEach(camera => Object.assign(camera, CAMERA_DETAILS[camera.id] || {
+  ibisLabel: camera.ibis ? 'あり（段数非公表）' : 'なし'
+}));
