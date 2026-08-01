@@ -12,7 +12,7 @@
   const strengthRank = new Map(strengthOrder.map((id, index) => [id, index]));
   const els = {
     controls: document.querySelector('.controls'), search: document.querySelector('#search'), clearSearch: document.querySelector('#clear-search'), brand: document.querySelector('#brand-filter'),
-    rows: document.querySelector('#camera-rows'), cards: document.querySelector('#camera-cards'), count: document.querySelector('#result-count'), empty: document.querySelector('#empty-state'), detailDialog: document.querySelector('#detail-dialog'), detailContent: document.querySelector('#detail-content')
+    tableShell: document.querySelector('.table-shell'), table: document.querySelector('.table-shell table'), rows: document.querySelector('#camera-rows'), cards: document.querySelector('#camera-cards'), count: document.querySelector('#result-count'), empty: document.querySelector('#empty-state'), detailDialog: document.querySelector('#detail-dialog'), detailContent: document.querySelector('#detail-content')
   };
 
   const syncStickyOffset = () => {
@@ -21,6 +21,38 @@
   syncStickyOffset();
   if ('ResizeObserver' in window) new ResizeObserver(syncStickyOffset).observe(els.controls);
   else window.addEventListener('resize', syncStickyOffset);
+
+  const originalHead = els.table.querySelector('thead');
+  const stickyHead = document.createElement('div');
+  stickyHead.className = 'sticky-table-head';
+  stickyHead.setAttribute('aria-hidden', 'true');
+  const stickyTable = document.createElement('table');
+  stickyTable.className = 'sticky-head-table';
+  stickyTable.append(originalHead.cloneNode(true));
+  stickyHead.append(stickyTable);
+  els.tableShell.before(stickyHead);
+
+  const moveStickyHeader = () => {
+    stickyTable.style.transform = `translateX(-${els.tableShell.scrollLeft}px)`;
+  };
+  const syncTableHeader = () => {
+    const tableVisible = !els.tableShell.hidden && getComputedStyle(els.tableShell).display !== 'none';
+    stickyHead.hidden = !tableVisible;
+    if (!tableVisible) return;
+    const sourceCells = [...originalHead.querySelectorAll('th')];
+    const clonedCells = [...stickyTable.querySelectorAll('th')];
+    stickyTable.style.width = `${els.table.scrollWidth}px`;
+    sourceCells.forEach((cell, index) => {
+      const width = cell.getBoundingClientRect().width;
+      clonedCells[index].style.width = `${width}px`;
+      clonedCells[index].style.minWidth = `${width}px`;
+      clonedCells[index].style.maxWidth = `${width}px`;
+    });
+    stickyHead.style.marginBottom = `-${stickyHead.offsetHeight}px`;
+    moveStickyHeader();
+  };
+  els.tableShell.addEventListener('scroll', moveStickyHeader, { passive: true });
+  window.addEventListener('resize', syncTableHeader);
 
   [...new Set(cameras.map(c => c.brand))].forEach(brand => {
     const option = document.createElement('option'); option.value = brand; option.textContent = brand; els.brand.append(option);
@@ -53,9 +85,10 @@
     els.cards.innerHTML = result.map(cameraCard).join('');
     els.count.textContent = result.length;
     els.empty.hidden = result.length !== 0;
-    document.querySelector('.table-shell').hidden = result.length === 0;
+    els.tableShell.hidden = result.length === 0;
     els.cards.hidden = result.length === 0;
     els.clearSearch.hidden = !state.search;
+    requestAnimationFrame(syncTableHeader);
   }
 
   function openDetail(id) {

@@ -43,15 +43,15 @@ const CAMERA_DETAILS = {
   'sony-fx5': {ibisLabel:'5軸（段数非公表）',price:'812,900円',display:'3.5" 4軸マルチアングル（バリチル）',image:'assets/sony-fx5-v2.webp'},
   'sony-fx3': {ibisLabel:'5.5段',price:'581,900円',display:'3.0" バリアングル',image:'assets/sony-fx3.webp'},
   'sony-fx30': {ibisLabel:'5軸 5.5段',price:'297,000円〜',display:'3.0" バリアングル',image:'assets/sony-fx30.webp'},
-  'nikon-z9': {ibisLabel:'最大 6.0段',price:'オープン価格',display:'3.2" 縦横4軸チルト',image:'assets/nikon-z9.webp'},
-  'nikon-z8': {ibisLabel:'最大 6.0段',price:'オープン価格',display:'3.2" 縦横4軸チルト',image:'assets/nikon-z8.webp'},
-  'nikon-z6-iii': {ibisLabel:'8.0段',price:'オープン価格',display:'3.2" バリアングル',image:'assets/nikon-z6-iii.webp'},
-  'nikon-z5-ii': {ibisLabel:'中央 7.5段 / 周辺 6.0段',price:'オープン価格',display:'3.2" バリアングル',image:'assets/nikon-z5-ii.webp'},
-  'nikon-zr': {ibisLabel:'中央 7.5段 / 周辺 6.0段',price:'オープン価格',display:'4.0" バリアングル',image:'assets/nikon-zr.webp'},
-  'fuji-gfx100s-ii': {ibisLabel:'8.0段',price:'オープン価格',display:'3.2" 3方向チルト',image:'assets/fuji-gfx100s-ii.webp'},
+  'nikon-z9': {ibisLabel:'最大 6.0段',price:'772,200円',display:'3.2" 縦横4軸チルト',image:'assets/nikon-z9.webp'},
+  'nikon-z8': {ibisLabel:'最大 6.0段',price:'575,300円',display:'3.2" 縦横4軸チルト',image:'assets/nikon-z8.webp'},
+  'nikon-z6-iii': {ibisLabel:'8.0段',price:'396,000円',display:'3.2" バリアングル',image:'assets/nikon-z6-iii.webp'},
+  'nikon-z5-ii': {ibisLabel:'中央 7.5段 / 周辺 6.0段',price:'258,500円',display:'3.2" バリアングル',image:'assets/nikon-z5-ii.webp'},
+  'nikon-zr': {ibisLabel:'中央 7.5段 / 周辺 6.0段',price:'299,200円',display:'4.0" バリアングル',image:'assets/nikon-zr.webp'},
+  'fuji-gfx100s-ii': {ibisLabel:'8.0段',price:'847,000円',display:'3.2" 3方向チルト',image:'assets/fuji-gfx100s-ii.webp'},
   'sigma-bf': {ibisLabel:'なし（動画EISのみ）',price:'385,000円',display:'3.15" 固定式',image:'assets/sigma-bf-silver-v2.webp'},
-  'sigma-fpl': {ibisLabel:'なし（動画電子式のみ）',price:'生産完了（オープン価格）',display:'3.15" 固定式',image:'assets/sigma-fpl.webp'},
-  'sigma-fp': {ibisLabel:'なし（動画電子式のみ）',price:'生産完了（オープン価格）',display:'3.15" 固定式',image:'assets/sigma-fp.webp'}
+  'sigma-fpl': {ibisLabel:'なし（動画電子式のみ）',price:'275,000円',display:'3.15" 固定式',image:'assets/sigma-fpl.webp'},
+  'sigma-fp': {ibisLabel:'なし（動画電子式のみ）',price:'公式ストア販売終了',display:'3.15" 固定式',image:'assets/sigma-fp.webp'}
 };
 
 window.CAMERAS.forEach(camera => Object.assign(camera, CAMERA_DETAILS[camera.id] || {
