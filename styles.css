@@ -67,9 +67,7 @@ tbody tr:hover { background: var(--surface-2); }
 .model-button strong { display: block; margin-bottom: 4px; color: var(--text); font-size: 16px; font-weight: 550; }
 .model-copy > span { color: var(--muted); font-size: 12px; }
 .camera-thumb-wrap { flex: 0 0 138px; display: grid; place-items: center; width: 138px; height: 104px; padding: 8px; border-radius: 9px; background: #f4f4f4; }
-.camera-thumb { display: block; width: auto; height: auto; max-width: 100%; max-height: 100%; object-fit: contain; object-position: center; }
-.yes { color: var(--accent); }
-.no { color: #6e6e73; }
+.camera-thumb { display: block; width: 100%; height: 100%; object-fit: contain; object-position: center; }
 .camera-cards { display: none; }
 .empty-state { padding: 90px 20px; text-align: center; border: 1px solid var(--line); border-radius: 14px; color: var(--muted); }
 .empty-state p { margin: 0 0 18px; }
@@ -90,7 +88,7 @@ dialog::backdrop { background: rgba(0,0,0,.72); backdrop-filter: blur(6px); }
 .detail-hero h2 { margin: 0; font-size: clamp(32px, 6vw, 52px); letter-spacing: -.045em; }
 .detail-meta { margin: 18px 0 0; color: var(--muted); font-size: 13px; }
 .detail-image-wrap { display: grid; place-items: center; height: 320px; margin-top: 28px; padding: 24px; border-radius: 12px; background: #f4f4f4; }
-.detail-image { display: block; width: auto; height: auto; max-width: 100%; max-height: 100%; object-fit: contain; object-position: center; }
+.detail-image { display: block; width: 100%; height: 100%; object-fit: contain; object-position: center; }
 .spec-grid { display: grid; grid-template-columns: repeat(2, 1fr); margin: 0; padding: 8px 32px 28px; }
 .spec-grid div { padding: 19px 0; border-bottom: 1px solid var(--line-soft); }
 .spec-grid div:nth-child(odd) { padding-right: 24px; }
@@ -108,7 +106,7 @@ dialog::backdrop { background: rgba(0,0,0,.72); backdrop-filter: blur(6px); }
   .camera-cards { display: grid; gap: 8px; }
   .camera-card { position: relative; padding: 18px; border: 1px solid var(--line); border-radius: 13px; background: var(--surface); }
   .card-image-wrap { display: grid; place-items: center; height: 220px; margin: -4px -4px 18px; padding: 18px; border-radius: 10px; background: #f4f4f4; }
-  .card-image { display: block; width: auto; height: auto; max-width: 100%; max-height: 100%; object-fit: contain; object-position: center; }
+  .card-image { display: block; width: 100%; height: 100%; object-fit: contain; object-position: center; }
   .card-top { display: flex; justify-content: space-between; gap: 14px; }
   .card-model { padding: 0; border: 0; background: none; color: inherit; text-align: left; }
   .card-model span { display: block; margin-bottom: 5px; color: var(--muted); font-size: 11px; }
