@@ -49,7 +49,7 @@ const CAMERA_DETAILS = {
   'nikon-z5-ii': {ibisLabel:'中央 7.5段 / 周辺 6.0段',price:'オープン価格',display:'3.2" バリアングル・タッチ・約210万ドット',image:'assets/nikon-z5-ii.webp'},
   'nikon-zr': {ibisLabel:'中央 7.5段 / 周辺 6.0段',price:'オープン価格',display:'4.0" バリアングル・タッチ・約307万ドット',image:'assets/nikon-zr.webp'},
   'fuji-gfx100s-ii': {ibisLabel:'8.0段',price:'オープン価格',display:'3.2" 3方向チルト・タッチ・約236万ドット',image:'assets/fuji-gfx100s-ii.webp'},
-  'sigma-bf': {ibisLabel:'なし（動画EISのみ）',price:'385,000円',display:'3.15" 固定式・タッチ・約210万ドット',image:'assets/sigma-bf.webp'},
+  'sigma-bf': {ibisLabel:'なし（動画EISのみ）',price:'385,000円',display:'3.15" 固定式・タッチ・約210万ドット',image:'assets/sigma-bf-silver.webp'},
   'sigma-fpl': {ibisLabel:'なし（動画電子式のみ）',price:'生産完了（オープン価格）',display:'3.15" 固定式・タッチ・約210万ドット',image:'assets/sigma-fpl.webp'},
   'sigma-fp': {ibisLabel:'なし（動画電子式のみ）',price:'生産完了（オープン価格）',display:'3.15" 固定式・タッチ・約210万ドット',image:'assets/sigma-fp.webp'}
 };
