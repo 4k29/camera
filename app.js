@@ -13,7 +13,7 @@
   });
 
   const normalize = value => value.toLowerCase().normalize('NFKC').replace(/\s+/g, '');
-  const cameraImage = (c, className) => c.image ? `<span class="${className}-wrap"><img class="${className}" src="${c.image}" alt="${c.brand} ${c.model} の外観" loading="lazy" referrerpolicy="no-referrer"></span>` : '';
+  const cameraImage = (c, className) => c.image ? `<span class="${className}-wrap"><img class="${className}" src="${c.image}" alt="${c.brand} ${c.model} の外観" decoding="async" referrerpolicy="no-referrer"></span>` : '';
   const filtered = () => {
     const query = normalize(state.search);
     const result = cameras.filter(c => {
@@ -71,8 +71,5 @@
     if (e.target.matches('[data-reset]') || e.target.closest('#reset-filters')) resetFilters();
   });
   els.detailDialog.addEventListener('click', e => { if (e.target === els.detailDialog) els.detailDialog.close(); });
-  document.addEventListener('error', e => {
-    if (e.target.matches('.camera-thumb, .card-image, .detail-image')) e.target.closest('[class$="-wrap"]').hidden = true;
-  }, true);
   render();
 })();
