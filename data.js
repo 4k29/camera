@@ -43,7 +43,7 @@ const CAMERA_DETAILS = {
   'sony-a7c-ii': {ibisLabel:'7.0段',image:'https://www.sony.jp/products/picture/middle/ILCE-7CM2.jpg'},
   'sony-a6700': {ibisLabel:'5.0段',image:'https://www.sony.jp/products/picture/ILCE-6700.jpg'},
   'sony-fx2': {ibisLabel:'中央 5.5段 / 周辺 5.0段',image:'https://www.sony.jp/products/picture/ILME-FX2B.jpg'},
-  'sony-fx3': {ibisLabel:'5.5段',image:'https://sony.scene7.com/is/image/sonyglobalsolutions/ILME-FX3A_01?$jpCategoryPdpNavProductImage$'},
+  'sony-fx3': {ibisLabel:'5.5段',image:'https://sony.scene7.com/is/image/sonyglobalsolutions/ILME-FX3A_01?wid=1200&hei=900&fmt=png-alpha'},
   'sony-fx30': {ibisLabel:'5軸 5.5段',image:'https://www.sony.jp/products/picture/ILME-FX30.jpg'},
   'nikon-z9': {ibisLabel:'最大 6.0段',image:'https://nij.nikon.com/cms/products/mirrorless/lineup/z_9/img/index/product_05.jpg'},
   'nikon-z8': {ibisLabel:'最大 6.0段',image:'https://nij.nikon.com/cms/products/mirrorless/lineup/z_8/img/index/product_05.jpg'},
