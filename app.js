@@ -1,7 +1,7 @@
 (() => {
   const cameras = window.CAMERAS;
   const state = { search: '', brand: 'all', sensor: 'all', purpose: 'all', sort: 'brand' };
-  const sensorNames = { 'Full Frame': 'フルサイズ', 'APS-C': 'APS-C', 'Medium Format': 'ラージフォーマット', 'Micro Four Thirds': 'Micro Four Thirds' };
+  const sensorNames = { 'Full Frame': 'フルサイズ', 'APS-C': 'APS-C', 'Medium Format': 'ラージフォーマット' };
   const purposeNames = { photo: '写真', hybrid: 'ハイブリッド', video: '映像', speed: '高速撮影' };
   const els = {
     search: document.querySelector('#search'), clearSearch: document.querySelector('#clear-search'), brand: document.querySelector('#brand-filter'), sensor: document.querySelector('#sensor-filter'), purpose: document.querySelector('#purpose-filter'), sort: document.querySelector('#sort'),
