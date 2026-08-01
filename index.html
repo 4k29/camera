@@ -4,23 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#0a0a0a">
-  <meta name="description" content="主要メーカーのミラーレスカメラを、同じ項目で探して比べる個人用スペックシート。">
-  <title>Camera Specs</title>
+  <meta name="description" content="主要メーカーのミラーレスカメラを共通の項目で探せる個人用スペックシート。">
+  <title>Camera</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="site-header">
-    <a class="brand" href="./" aria-label="Camera Specs ホーム">Camera</a>
-    <p class="updated">Verified <time datetime="2026-08-01">2026.08.01</time></p>
-  </header>
-
   <main>
-    <section class="hero" aria-labelledby="page-title">
-      <p class="eyebrow">Mirrorless camera database</p>
-      <h1 id="page-title">カメラを、同じ目線で比べる。</h1>
-      <p class="lead">主要6社のミラーレスを、センサー・画素数・連写・動画・質量など共通の項目で整理した個人用スペックシート。</p>
-    </section>
-
     <section class="controls" aria-label="カメラを検索・絞り込み">
       <label class="search-wrap">
         <span class="sr-only">機種名やマウントを検索</span>
@@ -63,7 +52,6 @@
         <table>
           <thead>
             <tr>
-              <th class="compare-column" scope="col"><span class="sr-only">比較</span></th>
               <th scope="col">Model</th>
               <th scope="col">Sensor</th>
               <th scope="col">Resolution</th>
@@ -89,36 +77,9 @@
     </section>
   </main>
 
-  <aside id="compare-tray" class="compare-tray" aria-label="比較するカメラ" hidden>
-    <div>
-      <p class="compare-label">Compare</p>
-      <p id="compare-names"></p>
-    </div>
-    <div class="tray-actions">
-      <button id="clear-compare" class="tray-clear" type="button">クリア</button>
-      <button id="open-compare" class="primary-button" type="button">比較する <span id="compare-count">0</span>/3</button>
-    </div>
-  </aside>
-
   <dialog id="detail-dialog" class="detail-dialog">
     <div id="detail-content"></div>
   </dialog>
-
-  <dialog id="compare-dialog" class="compare-dialog">
-    <div class="dialog-head">
-      <div>
-        <p class="eyebrow">Comparison</p>
-        <h2>選んだカメラを比較</h2>
-      </div>
-      <button class="icon-button" type="button" data-close-dialog aria-label="閉じる">×</button>
-    </div>
-    <div id="comparison-table" class="comparison-wrap"></div>
-  </dialog>
-
-  <footer>
-    <p>Camera Specs — personal reference</p>
-    <a href="#">Back to top ↑</a>
-  </footer>
 
   <script src="data.js"></script>
   <script src="app.js"></script>
