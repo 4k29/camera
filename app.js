@@ -1,17 +1,17 @@
 (() => {
   const cameras = window.CAMERAS;
-  const state = { search: '', brand: 'all', sensor: 'all', purpose: 'all', sort: 'brand' };
+  const state = { search: '', brand: 'all' };
   const sensorNames = { 'Full Frame': 'フルサイズ', 'APS-C': 'APS-C', 'Medium Format': 'ラージフォーマット' };
   const purposeNames = { photo: '写真', hybrid: 'ハイブリッド', video: '映像', speed: '高速撮影' };
   const strengthOrder = [
-    'fuji-gfx100s-ii', 'fuji-xh2s', 'fuji-xh2', 'fuji-xt5', 'fuji-xs20',
+    'fuji-gfx100s-ii',
     'nikon-zr', 'nikon-z9', 'nikon-z8', 'nikon-z6-iii', 'nikon-z5-ii',
     'sigma-fpl', 'sigma-bf', 'sigma-fp',
     'sony-a1-ii', 'sony-a9-iii', 'sony-a7r-vi', 'sony-fx3', 'sony-fx2', 'sony-a7-v', 'sony-a7-iv', 'sony-a7cr', 'sony-a7c-ii', 'sony-fx30', 'sony-a6700'
   ];
   const strengthRank = new Map(strengthOrder.map((id, index) => [id, index]));
   const els = {
-    search: document.querySelector('#search'), clearSearch: document.querySelector('#clear-search'), brand: document.querySelector('#brand-filter'), sensor: document.querySelector('#sensor-filter'), purpose: document.querySelector('#purpose-filter'), sort: document.querySelector('#sort'),
+    search: document.querySelector('#search'), clearSearch: document.querySelector('#clear-search'), brand: document.querySelector('#brand-filter'),
     rows: document.querySelector('#camera-rows'), cards: document.querySelector('#camera-cards'), count: document.querySelector('#result-count'), empty: document.querySelector('#empty-state'), detailDialog: document.querySelector('#detail-dialog'), detailContent: document.querySelector('#detail-content')
   };
 
@@ -25,14 +25,9 @@
     const query = normalize(state.search);
     const result = cameras.filter(c => {
       const haystack = normalize([c.brand, c.model, c.mount, c.sensor, sensorNames[c.sensor]].join(' '));
-      return (!query || haystack.includes(query)) && (state.brand === 'all' || c.brand === state.brand) && (state.sensor === 'all' || c.sensor === state.sensor) && (state.purpose === 'all' || c.purpose.includes(state.purpose));
+      return (!query || haystack.includes(query)) && (state.brand === 'all' || c.brand === state.brand);
     });
-    return result.sort((a, b) => {
-      if (state.sort === 'newest') return b.released.localeCompare(a.released);
-      if (state.sort === 'resolution') return b.mp - a.mp;
-      if (state.sort === 'weight') return a.weight - b.weight;
-      return a.brand.localeCompare(b.brand) || (strengthRank.get(a.id) ?? 999) - (strengthRank.get(b.id) ?? 999);
-    });
+    return result.sort((a, b) => a.brand.localeCompare(b.brand) || (strengthRank.get(a.id) ?? 999) - (strengthRank.get(b.id) ?? 999));
   };
 
   const cameraRow = c => `<tr>
@@ -65,13 +60,13 @@
   }
 
   function resetFilters() {
-    Object.assign(state, { search: '', brand: 'all', sensor: 'all', purpose: 'all', sort: 'brand' });
-    els.search.value = ''; els.brand.value = 'all'; els.sensor.value = 'all'; els.purpose.value = 'all'; els.sort.value = 'brand'; render();
+    Object.assign(state, { search: '', brand: 'all' });
+    els.search.value = ''; els.brand.value = 'all'; render();
   }
 
   els.search.addEventListener('input', e => { state.search = e.target.value; render(); });
   els.clearSearch.addEventListener('click', () => { state.search = ''; els.search.value = ''; els.search.focus(); render(); });
-  [['brand', els.brand], ['sensor', els.sensor], ['purpose', els.purpose], ['sort', els.sort]].forEach(([key, el]) => el.addEventListener('change', e => { state[key] = e.target.value; render(); }));
+  els.brand.addEventListener('change', e => { state.brand = e.target.value; render(); });
   document.addEventListener('click', e => {
     const detail = e.target.closest('[data-detail]'); if (detail) openDetail(detail.dataset.detail);
     if (e.target.closest('[data-close-dialog]')) e.target.closest('dialog').close();
