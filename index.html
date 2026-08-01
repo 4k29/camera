@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta name="description" content="主要メーカーのミラーレスカメラを、同じ項目で探して比べる個人用スペックシート。">
+  <title>Camera Specs</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="./" aria-label="Camera Specs ホーム">Camera</a>
+    <p class="updated">Verified <time datetime="2026-08-01">2026.08.01</time></p>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="page-title">
+      <p class="eyebrow">Mirrorless camera database</p>
+      <h1 id="page-title">カメラを、同じ目線で比べる。</h1>
+      <p class="lead">主要6社のミラーレスを、センサー・画素数・連写・動画・質量など共通の項目で整理した個人用スペックシート。</p>
+    </section>
+
+    <section class="controls" aria-label="カメラを検索・絞り込み">
+      <label class="search-wrap">
+        <span class="sr-only">機種名やマウントを検索</span>
+        <input id="search" type="search" autocomplete="off" placeholder="機種名・マウントを検索">
+        <button id="clear-search" class="clear-button" type="button" aria-label="検索を消去" hidden>×</button>
+      </label>
+      <div class="filter-row">
+        <select id="brand-filter" aria-label="メーカー">
+          <option value="all">すべてのメーカー</option>
+        </select>
+        <select id="sensor-filter" aria-label="センサーサイズ">
+          <option value="all">すべてのセンサー</option>
+          <option value="Full Frame">フルサイズ</option>
+          <option value="APS-C">APS-C</option>
+          <option value="Medium Format">ラージフォーマット</option>
+          <option value="Micro Four Thirds">Micro Four Thirds</option>
+        </select>
+        <select id="purpose-filter" aria-label="主な用途">
+          <option value="all">すべての用途</option>
+          <option value="photo">写真</option>
+          <option value="hybrid">ハイブリッド</option>
+          <option value="video">映像</option>
+          <option value="speed">高速撮影</option>
+        </select>
+        <select id="sort" aria-label="並び順">
+          <option value="brand">メーカー順</option>
+          <option value="newest">発売が新しい順</option>
+          <option value="resolution">画素数が多い順</option>
+          <option value="weight">軽い順</option>
+        </select>
+      </div>
+    </section>
+
+    <section class="results" aria-live="polite">
+      <div class="results-head">
+        <p><strong id="result-count">0</strong> cameras</p>
+        <button id="reset-filters" class="text-button" type="button">絞り込みを解除</button>
+      </div>
+      <div class="table-shell">
+        <table>
+          <thead>
+            <tr>
+              <th class="compare-column" scope="col"><span class="sr-only">比較</span></th>
+              <th scope="col">Model</th>
+              <th scope="col">Sensor</th>
+              <th scope="col">Resolution</th>
+              <th scope="col">IBIS</th>
+              <th scope="col">Burst</th>
+              <th scope="col">Video</th>
+              <th scope="col">Weight</th>
+            </tr>
+          </thead>
+          <tbody id="camera-rows"></tbody>
+        </table>
+      </div>
+      <div id="camera-cards" class="camera-cards"></div>
+      <div id="empty-state" class="empty-state" hidden>
+        <p>条件に合うカメラがありません。</p>
+        <button class="text-button" type="button" data-reset>絞り込みを解除</button>
+      </div>
+    </section>
+
+    <section class="notes" aria-labelledby="notes-title">
+      <h2 id="notes-title">About the data</h2>
+      <p>連写速度は各機種の最高値で、AF/AE追従・RAW・電子シャッターなどの条件は機種ごとに異なります。質量は原則としてバッテリー・メモリーカード込み。購入判断では各機種の「公式仕様」を確認してください。</p>
+    </section>
+  </main>
+
+  <aside id="compare-tray" class="compare-tray" aria-label="比較するカメラ" hidden>
+    <div>
+      <p class="compare-label">Compare</p>
+      <p id="compare-names"></p>
+    </div>
+    <div class="tray-actions">
+      <button id="clear-compare" class="tray-clear" type="button">クリア</button>
+      <button id="open-compare" class="primary-button" type="button">比較する <span id="compare-count">0</span>/3</button>
+    </div>
+  </aside>
+
+  <dialog id="detail-dialog" class="detail-dialog">
+    <div id="detail-content"></div>
+  </dialog>
+
+  <dialog id="compare-dialog" class="compare-dialog">
+    <div class="dialog-head">
+      <div>
+        <p class="eyebrow">Comparison</p>
+        <h2>選んだカメラを比較</h2>
+      </div>
+      <button class="icon-button" type="button" data-close-dialog aria-label="閉じる">×</button>
+    </div>
+    <div id="comparison-table" class="comparison-wrap"></div>
+  </dialog>
+
+  <footer>
+    <p>Camera Specs — personal reference</p>
+    <a href="#">Back to top ↑</a>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
