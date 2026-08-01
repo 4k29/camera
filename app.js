@@ -6,7 +6,7 @@
   const strengthOrder = [
     'canon-r1', 'canon-r5-ii', 'canon-r6-iii', 'canon-r8',
     'fuji-gfx100s-ii', 'fuji-xh2s', 'fuji-xh2', 'fuji-xt5', 'fuji-xs20',
-    'nikon-z9', 'nikon-z8', 'nikon-z6-iii', 'nikon-zr', 'nikon-z5-ii',
+    'nikon-zr', 'nikon-z9', 'nikon-z8', 'nikon-z6-iii', 'nikon-z5-ii',
     'sony-a1-ii', 'sony-a9-iii', 'sony-a7r-vi', 'sony-fx3', 'sony-fx2', 'sony-a7-v', 'sony-a7-iv', 'sony-a7cr', 'sony-a7c-ii', 'sony-fx30', 'sony-a6700'
   ];
   const strengthRank = new Map(strengthOrder.map((id, index) => [id, index]));
@@ -37,7 +37,7 @@
 
   const cameraRow = c => `<tr>
     <td class="model-cell"><button class="model-button" type="button" data-detail="${c.id}">${cameraImage(c, 'camera-thumb')}<span class="model-copy"><strong>${c.model}</strong><span>${c.brand} · ${c.mount}</span></span></button></td>
-    <td>${sensorNames[c.sensor]}</td><td>${c.mp} MP</td><td class="${c.ibis ? 'yes' : 'no'}">${c.ibisLabel}</td><td>${c.burst}</td><td>${c.video}</td><td>${c.weight} g</td>
+    <td>${sensorNames[c.sensor]}</td><td>${c.mp} MP</td><td>${c.ibisLabel}</td><td>${c.burst}</td><td>${c.video}</td><td>${c.weight} g</td>
   </tr>`;
   const cameraCard = c => `<article class="camera-card">
     ${cameraImage(c, 'card-image')}
