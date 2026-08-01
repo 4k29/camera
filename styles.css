@@ -47,7 +47,8 @@ main { width: min(calc(100% - 40px), var(--max)); margin: 0 auto; padding-top: 2
 }
 #search:focus { border-color: #666; box-shadow: 0 0 0 3px rgba(255,255,255,.06); }
 .clear-button { position: absolute; inset: 0 10px 0 auto; margin: auto; width: 36px; height: 36px; border: 0; border-radius: 50%; color: var(--muted); background: transparent; font-size: 22px; }
-.filter-row { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; margin-top: 8px; }
+.filter-row { margin-top: 8px; }
+.filter-row select { width: 100%; }
 select { min-width: 0; height: 46px; padding: 0 38px 0 14px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); color: var(--text); }
 .results { padding: 34px 0 0; }
 .results-head { display: flex; justify-content: space-between; align-items: center; padding-bottom: 14px; color: var(--muted); font-size: 13px; }
@@ -102,9 +103,7 @@ dialog::backdrop { background: rgba(0,0,0,.72); backdrop-filter: blur(6px); }
 @media (max-width: 760px) {
   main { width: min(calc(100% - 28px), var(--max)); padding-top: 0; }
   .controls { margin-inline: -14px; padding: 14px; }
-  .filter-row { display: flex; overflow-x: auto; scrollbar-width: none; }
-  .filter-row::-webkit-scrollbar { display: none; }
-  select { flex: 0 0 auto; max-width: 190px; }
+  .filter-row select { max-width: none; }
   .table-shell { display: none; }
   .camera-cards { display: grid; gap: 8px; }
   .camera-card { position: relative; padding: 18px; border: 1px solid var(--line); border-radius: 13px; background: var(--surface); }
