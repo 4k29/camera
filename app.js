@@ -4,7 +4,6 @@
   const sensorNames = { 'Full Frame': 'フルサイズ', 'APS-C': 'APS-C', 'Medium Format': 'ラージフォーマット' };
   const purposeNames = { photo: '写真', hybrid: 'ハイブリッド', video: '映像', speed: '高速撮影' };
   const strengthOrder = [
-    'canon-r1', 'canon-r5-ii', 'canon-r6-iii', 'canon-r8',
     'fuji-gfx100s-ii', 'fuji-xh2s', 'fuji-xh2', 'fuji-xt5', 'fuji-xs20',
     'nikon-zr', 'nikon-z9', 'nikon-z8', 'nikon-z6-iii', 'nikon-z5-ii',
     'sony-a1-ii', 'sony-a9-iii', 'sony-a7r-vi', 'sony-fx3', 'sony-fx2', 'sony-a7-v', 'sony-a7-iv', 'sony-a7cr', 'sony-a7c-ii', 'sony-fx30', 'sony-a6700'
