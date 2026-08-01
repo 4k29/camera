@@ -13,6 +13,7 @@ window.CAMERAS = [
   {id:'sony-a7c-ii',brand:'Sony',model:'α7C II',mount:'Sony E',sensor:'Full Frame',mp:33.0,ibis:true,burst:'10 fps',burstValue:10,video:'4K 60p',weight:514,released:'2023-10',purpose:['photo','hybrid'],official:'https://www.sony.jp/ichigan/products/ILCE-7CM2/'},
   {id:'sony-a6700',brand:'Sony',model:'α6700',mount:'Sony E',sensor:'APS-C',mp:26.0,ibis:true,burst:'11 fps',burstValue:11,video:'4K 120p',weight:493,released:'2023-07',purpose:['photo','hybrid','video'],official:'https://www.sony.jp/ichigan/products/ILCE-6700/'},
   {id:'sony-fx2',brand:'Sony',model:'FX2',mount:'Sony E',sensor:'Full Frame',mp:33.0,ibis:true,burst:'10 fps',burstValue:10,video:'4K 60p / 16-bit RAW output',weight:770,released:'2025-08',purpose:['hybrid','video'],official:'https://www.sony.jp/pro-cam/products/ILME-FX2B/'},
+  {id:'sony-fx5',brand:'Sony',model:'FX5',mount:'Sony E',sensor:'Full Frame',mp:16.6,ibis:true,burst:'—',burstValue:0,video:'5K 60p / 4K 120p / 16-bit X-OCN',weight:734,released:'2026-08',purpose:['video'],official:'https://www.sony.jp/pro-cam/products/ILME-FX5/'},
   {id:'sony-fx3',brand:'Sony',model:'FX3',mount:'Sony E',sensor:'Full Frame',mp:12.1,ibis:true,burst:'10 fps',burstValue:10,video:'4K 120p / 16-bit RAW output',weight:715,released:'2021-03',purpose:['video'],official:'https://www.sony.jp/pro-cam/products/ILME-FX3A/'},
   {id:'sony-fx30',brand:'Sony',model:'FX30',mount:'Sony E',sensor:'APS-C',mp:26.0,ibis:true,burst:'—',burstValue:0,video:'4K 120p / 16-bit RAW output',weight:646,released:'2022-10',purpose:['video'],official:'https://www.sony.jp/pro-cam/products/ILME-FX30/'},
 
@@ -30,26 +31,27 @@ window.CAMERAS = [
 ];
 
 const CAMERA_DETAILS = {
-  'sony-a1-ii': {ibisLabel:'中央 8.5段 / 周辺 7.0段',price:'990,000円',image:'https://www.sony.jp/products/picture/middle/ILCE-1M2.jpg'},
-  'sony-a9-iii': {ibisLabel:'8.0段',price:'935,000円',image:'https://www.sony.jp/products/picture/middle/ILCE-9M3.jpg'},
-  'sony-a7r-vi': {ibisLabel:'中央 8.5段 / 周辺 7.0段',price:'740,300円',image:'https://www.sony.jp/products/picture/middle/ILCE-7RM6.jpg'},
-  'sony-a7-v': {ibisLabel:'中央 7.5段 / 周辺 6.5段',price:'416,900円〜',image:'https://www.sony.jp/products/picture/middle/ILCE-7M5.jpg'},
-  'sony-a7-iv': {ibisLabel:'5.5段',price:'361,900円〜',image:'https://www.sony.jp/products/picture/middle/ILCE-7M4.jpg'},
-  'sony-a7cr': {ibisLabel:'7.0段',price:'449,900円〜',image:'https://www.sony.jp/products/picture/middle/ILCE-7CR.jpg'},
-  'sony-a7c-ii': {ibisLabel:'7.0段',price:'306,900円〜',image:'https://www.sony.jp/products/picture/middle/ILCE-7CM2.jpg'},
-  'sony-a6700': {ibisLabel:'5.0段',price:'229,900円〜',image:'https://www.sony.jp/products/picture/middle/ILCE-6700.jpg'},
-  'sony-fx2': {ibisLabel:'中央 5.5段 / 周辺 5.0段',price:'416,900円',image:'https://sony.scene7.com/is/image/sonyglobalsolutions/ILME-FX2B-2?$jpCategoryPdpNavProductImage$='},
-  'sony-fx3': {ibisLabel:'5.5段',price:'581,900円',image:'https://sony.scene7.com/is/image/sonyglobalsolutions/ILME-FX3A_01?$jpCategoryPdpNavProductImage$='},
-  'sony-fx30': {ibisLabel:'5軸 5.5段',price:'297,000円〜',image:'https://www.sony.jp/products/picture/middle/ILME-FX30.jpg'},
-  'nikon-z9': {ibisLabel:'最大 6.0段',price:'オープン価格',image:'https://nij.nikon.com/cms/products/mirrorless/lineup/z_9/img/index/product_01.jpg'},
-  'nikon-z8': {ibisLabel:'最大 6.0段',price:'オープン価格',image:'https://nij.nikon.com/cms/products/mirrorless/lineup/z_8/img/index/product_01.jpg'},
-  'nikon-z6-iii': {ibisLabel:'8.0段',price:'オープン価格',image:'https://nij.nikon.com/cms/products/mirrorless/lineup/z6_3/img/index/product_01.jpg'},
-  'nikon-z5-ii': {ibisLabel:'中央 7.5段 / 周辺 6.0段',price:'オープン価格',image:'https://nij.nikon.com/cms/products/lineup/mirrorless/z5_2/img/index/product_01.jpg'},
-  'nikon-zr': {ibisLabel:'中央 7.5段 / 周辺 6.0段',price:'オープン価格',image:'https://nij.nikon.com/cms/products/lineup/z_cinema/zr/img/index/product_01.jpg'},
-  'fuji-gfx100s-ii': {ibisLabel:'8.0段',price:'オープン価格',image:'https://shopusa.fujifilm-x.com/media/catalog/product/6/0/600023616_MAIN00_Image_GFX100S__front_CMOS.jpg'},
-  'sigma-bf': {ibisLabel:'なし（動画EISのみ）',price:'385,000円',image:'https://www.sigma-global.com/cameras/bf_camera_01.jpg'},
-  'sigma-fpl': {ibisLabel:'なし（動画電子式のみ）',price:'生産完了（オープン価格）',image:'https://www.sigma-global.com/cameras/fpl_product_img01.png'},
-  'sigma-fp': {ibisLabel:'なし（動画電子式のみ）',price:'生産完了（オープン価格）',image:'https://www.sigma-global.com/cameras/fp_product_img01.png'}
+  'sony-a1-ii': {ibisLabel:'中央 8.5段 / 周辺 7.0段',price:'990,000円',display:'3.2" 4軸マルチアングル（バリチル）・タッチ・約209万ドット',image:'https://www.sony.jp/products/picture/middle/ILCE-1M2.jpg'},
+  'sony-a9-iii': {ibisLabel:'8.0段',price:'935,000円',display:'3.2" 4軸マルチアングル（バリチル）・タッチ・約209万ドット',image:'https://www.sony.jp/products/picture/middle/ILCE-9M3.jpg'},
+  'sony-a7r-vi': {ibisLabel:'中央 8.5段 / 周辺 7.0段',price:'740,300円',display:'3.2" 4軸マルチアングル（バリチル）・タッチ・約209万ドット',image:'https://www.sony.jp/products/picture/middle/ILCE-7RM6.jpg'},
+  'sony-a7-v': {ibisLabel:'中央 7.5段 / 周辺 6.5段',price:'416,900円〜',display:'3.2" 4軸マルチアングル（バリチル）・タッチ・約209万ドット',image:'https://www.sony.jp/products/picture/middle/ILCE-7M5.jpg'},
+  'sony-a7-iv': {ibisLabel:'5.5段',price:'361,900円〜',display:'3.0" バリアングル・タッチ・約104万ドット',image:'https://www.sony.jp/products/picture/middle/ILCE-7M4.jpg'},
+  'sony-a7cr': {ibisLabel:'7.0段',price:'449,900円〜',display:'3.0" バリアングル・タッチ・約104万ドット',image:'assets/sony-a7cr.webp'},
+  'sony-a7c-ii': {ibisLabel:'7.0段',price:'306,900円〜',display:'3.0" バリアングル・タッチ・約104万ドット',image:'assets/sony-a7c-ii.webp'},
+  'sony-a6700': {ibisLabel:'5.0段',price:'229,900円〜',display:'3.0" バリアングル・タッチ・約104万ドット',image:'https://www.sony.jp/products/picture/middle/ILCE-6700.jpg'},
+  'sony-fx2': {ibisLabel:'中央 5.5段 / 周辺 5.0段',price:'416,900円',display:'3.0" バリアングル・タッチ・約104万ドット',image:'assets/sony-fx2.webp'},
+  'sony-fx5': {ibisLabel:'5軸（段数非公表）',price:'812,900円',display:'3.5" 4軸マルチアングル（バリチル）・タッチ・約276万ドット',image:'assets/sony-fx5.webp'},
+  'sony-fx3': {ibisLabel:'5.5段',price:'581,900円',display:'3.0" バリアングル・タッチ・約236万ドット',image:'assets/sony-fx3.webp'},
+  'sony-fx30': {ibisLabel:'5軸 5.5段',price:'297,000円〜',display:'3.0" バリアングル・タッチ・約236万ドット',image:'https://www.sony.jp/products/picture/middle/ILME-FX30.jpg'},
+  'nikon-z9': {ibisLabel:'最大 6.0段',price:'オープン価格',display:'3.2" 縦横4軸チルト・タッチ・約210万ドット',image:'https://nij.nikon.com/cms/products/mirrorless/lineup/z_9/img/index/product_01.jpg'},
+  'nikon-z8': {ibisLabel:'最大 6.0段',price:'オープン価格',display:'3.2" 縦横4軸チルト・タッチ・約210万ドット',image:'https://nij.nikon.com/cms/products/mirrorless/lineup/z_8/img/index/product_01.jpg'},
+  'nikon-z6-iii': {ibisLabel:'8.0段',price:'オープン価格',display:'3.2" バリアングル・タッチ・約210万ドット',image:'https://nij.nikon.com/cms/products/mirrorless/lineup/z6_3/img/index/product_01.jpg'},
+  'nikon-z5-ii': {ibisLabel:'中央 7.5段 / 周辺 6.0段',price:'オープン価格',display:'3.2" バリアングル・タッチ・約210万ドット',image:'https://nij.nikon.com/cms/products/lineup/mirrorless/z5_2/img/index/product_01.jpg'},
+  'nikon-zr': {ibisLabel:'中央 7.5段 / 周辺 6.0段',price:'オープン価格',display:'4.0" バリアングル・タッチ・約307万ドット',image:'https://nij.nikon.com/cms/products/lineup/z_cinema/zr/img/index/product_01.jpg'},
+  'fuji-gfx100s-ii': {ibisLabel:'8.0段',price:'オープン価格',display:'3.2" 3方向チルト・タッチ・約236万ドット',image:'https://shopusa.fujifilm-x.com/media/catalog/product/6/0/600023616_MAIN00_Image_GFX100S__front_CMOS.jpg'},
+  'sigma-bf': {ibisLabel:'なし（動画EISのみ）',price:'385,000円',display:'3.15" 固定式・タッチ・約210万ドット',image:'https://www.sigma-global.com/cameras/bf_camera_01.jpg'},
+  'sigma-fpl': {ibisLabel:'なし（動画電子式のみ）',price:'生産完了（オープン価格）',display:'3.15" 固定式・タッチ・約210万ドット',image:'https://www.sigma-global.com/cameras/fpl_product_img01.png'},
+  'sigma-fp': {ibisLabel:'なし（動画電子式のみ）',price:'生産完了（オープン価格）',display:'3.15" 固定式・タッチ・約210万ドット',image:'https://www.sigma-global.com/cameras/fp_product_img01.png'}
 };
 
 window.CAMERAS.forEach(camera => Object.assign(camera, CAMERA_DETAILS[camera.id] || {
