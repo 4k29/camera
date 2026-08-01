@@ -16,11 +16,6 @@ window.CAMERAS = [
   {id:'sony-fx3',brand:'Sony',model:'Cinema Line FX3',mount:'Sony E',sensor:'Full Frame',mp:12.1,ibis:true,burst:'10 fps',burstValue:10,video:'4K 120p / 16-bit RAW output',weight:715,released:'2021-03',purpose:['video'],official:'https://www.sony.jp/pro-cam/products/ILME-FX3A/'},
   {id:'sony-fx30',brand:'Sony',model:'Cinema Line FX30',mount:'Sony E',sensor:'APS-C',mp:26.0,ibis:true,burst:'—',burstValue:0,video:'4K 120p / 16-bit RAW output',weight:646,released:'2022-10',purpose:['video'],official:'https://www.sony.jp/pro-cam/products/ILME-FX30/'},
 
-  {id:'canon-r1',brand:'Canon',model:'EOS R1',mount:'Canon RF',sensor:'Full Frame',mp:24.2,ibis:true,burst:'40 fps',burstValue:40,video:'6K 60p RAW / 4K 120p',weight:1115,released:'2024-11',purpose:['photo','hybrid','speed'],official:'https://personal.canon.jp/product/camera/eos/r1'},
-  {id:'canon-r5-ii',brand:'Canon',model:'EOS R5 Mark II',mount:'Canon RF',sensor:'Full Frame',mp:45.0,ibis:true,burst:'30 fps',burstValue:30,video:'8K 60p RAW / 4K 120p',weight:746,released:'2024-08',purpose:['photo','hybrid'],official:'https://personal.canon.jp/product/camera/eos/r5mk2'},
-  {id:'canon-r6-iii',brand:'Canon',model:'EOS R6 Mark III',mount:'Canon RF',sensor:'Full Frame',mp:32.5,ibis:true,burst:'40 fps',burstValue:40,video:'7K 60p RAW / Open Gate',weight:699,released:'2025-11',purpose:['hybrid','video','speed'],official:'https://personal.canon.jp/product/camera/eos/r6mk3'},
-  {id:'canon-r8',brand:'Canon',model:'EOS R8',mount:'Canon RF',sensor:'Full Frame',mp:24.2,ibis:false,burst:'40 fps',burstValue:40,video:'4K 60p',weight:461,released:'2023-04',purpose:['hybrid'],official:'https://personal.canon.jp/product/camera/eos/r8'},
-
   {id:'nikon-z9',brand:'Nikon',model:'Z9',mount:'Nikon Z',sensor:'Full Frame',mp:45.7,ibis:true,burst:'20 fps RAW / 120 fps JPEG',burstValue:120,video:'8.3K 60p RAW / 4K 120p',weight:1340,released:'2021-12',purpose:['photo','hybrid','speed'],official:'https://www.nikon-image.com/products/mirrorless/lineup/z_9/'},
   {id:'nikon-z8',brand:'Nikon',model:'Z8',mount:'Nikon Z',sensor:'Full Frame',mp:45.7,ibis:true,burst:'20 fps RAW / 120 fps JPEG',burstValue:120,video:'8.3K 60p RAW / 4K 120p',weight:910,released:'2023-05',purpose:['photo','hybrid','speed'],official:'https://www.nikon-image.com/products/mirrorless/lineup/z_8/'},
   {id:'nikon-z6-iii',brand:'Nikon',model:'Z6III',mount:'Nikon Z',sensor:'Full Frame',mp:24.5,ibis:true,burst:'20 fps RAW / 120 fps JPEG',burstValue:120,video:'6K 60p RAW / 4K 120p',weight:760,released:'2024-07',purpose:['hybrid','video','speed'],official:'https://www.nikon-image.com/products/mirrorless/lineup/z6_3/'},
@@ -46,10 +41,6 @@ const CAMERA_DETAILS = {
   'sony-fx2': {ibisLabel:'中央 5.5段 / 周辺 5.0段',image:'https://www.sony.jp/products/picture/ILME-FX2B.jpg'},
   'sony-fx3': {ibisLabel:'5.5段',image:'https://www.sony.jp/products/picture/ILME-FX3A.jpg'},
   'sony-fx30': {ibisLabel:'5軸 5.5段',image:'https://www.sony.jp/products/picture/ILME-FX30.jpg'},
-  'canon-r1': {ibisLabel:'中央 8.5段 / 周辺 7.5段',image:'https://store.canon.jp/img/goods/L/6577C001.jpg'},
-  'canon-r5-ii': {ibisLabel:'中央 8.5段 / 周辺 7.5段',image:'https://store.canon.jp/img/goods/L/6536C001.jpg'},
-  'canon-r6-iii': {ibisLabel:'中央 8.5段 / 周辺 7.5段',image:'https://store.canon.jp/img/goods/S/7084C001.png'},
-  'canon-r8': {ibisLabel:'なし',image:'https://store.canon.jp/img/goods/L/5803C001.jpg'},
   'nikon-z9': {ibisLabel:'最大 6.0段',image:'https://nij.nikon.com/cms/products/mirrorless/lineup/z_9/img/index/product_05.jpg'},
   'nikon-z8': {ibisLabel:'最大 6.0段',image:'https://nij.nikon.com/cms/products/mirrorless/lineup/z_8/img/index/product_05.jpg'},
   'nikon-z6-iii': {ibisLabel:'8.0段',image:'https://nij.nikon.com/cms/products/mirrorless/lineup/z6_3/img/index/product_07.jpg'},
